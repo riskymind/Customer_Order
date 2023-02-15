@@ -28,4 +28,11 @@ class OrderRouteTest {
         )
         assertEquals(HttpStatusCode.OK, response.status)
     }
+
+    @Test
+    fun testTotalOrderRoute()  = testApplication {
+        val response = client.get("/order/2020-09-04/total")
+        assertEquals("23.15", response.bodyAsText())
+        assertEquals(HttpStatusCode.OK, response.status)
+    }
 }

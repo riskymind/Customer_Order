@@ -4,10 +4,14 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Customer(
-    val id: String,
-    val firstName: String,
-    val lastName: String,
-    val email: String
+    val id: String, val firstName: String, val lastName: String, val email: String
 )
 
-val customerStorage = mutableListOf<Customer>()
+val customerStorage = mutableListOf<Customer>(
+    Customer(
+        id = "kel_03",
+        firstName = "kelechi",
+        lastName = "opara",
+        email = "me@gmail.com"
+    )
+)
